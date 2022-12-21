@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  kafka-streams:
+    build: .
+    volumes:
+      - .:/kafka-streams
+      - ./.bash_history:/root/.bash_history
+    command: /bin/bash -l
+    working_dir: /kafka-streams
